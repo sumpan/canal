@@ -29,7 +29,7 @@ public class CanalLauncher {
             } else {
                 properties.load(new FileInputStream(conf));
             }
-
+            System.out.println(properties.get("dongbin.test"));
             logger.info("## start the canal server.");
             final CanalController controller = new CanalController(properties);
             controller.start();
